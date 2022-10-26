@@ -117,7 +117,7 @@ header {
     font-size: var(--Fuente-Parrafo);
 }
 
-.list__item:last-child {
+.list__item--button {
     border-radius: var(--Border-Radius);
     padding: var(--Corto) var(--Mediano);
     cursor: pointer;
@@ -133,11 +133,11 @@ header {
     color: var(--Color-Principal);
 }
 
-.list__item:last-child:hover {
+.list__item--button:hover {
     background: var(--Color-Principal);
 }
 
-.list__item:last-child:hover a {
+.list__item--button:hover a {
     color: var(--Color-Body);
 }
 
@@ -406,4 +406,21 @@ main {
 .testimonial__stars svg {
     width: 20px;
     height: 20px;
+}
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    margin-top: calc(2 * var(--Mediano));
+    padding-top: calc(2 * var(--Mediano));
+    padding-bottom: var(--Mediano);
+    flex-direction: column;
+    gap: var(--Mediano);
+    border-top: 1px solid var(--Color-Principal);
+}
+
+.list__icon:hover .list__path {
+    fill: var(--Color-Principal);
+    transition: .3s;
 }
