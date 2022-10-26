@@ -1,5 +1,5 @@
 /* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800;900&display=swap');
 
 :root {
     /* VARIABLES */
@@ -224,7 +224,7 @@ main {
 
 .projects {
     flex-direction: column;
-    gap: var(--Mediano);
+    gap: calc(2 * var(--Mediano)) ;
 }
 
 .title {
@@ -257,13 +257,20 @@ main {
 
 .card__picture {
     position: absolute;
+    width: 100%;
+    overflow: hidden;
     z-index: -1;
+}
+
+.card:hover .card__img {
+    width: 110%;
 }
 
 .card__img {
     width: 100%;
     object-fit: cover;
     z-index: 0;
+    transition: .3s;
 }
 
 .card__content {
@@ -317,4 +324,86 @@ main {
 
 .card__demo:hover {
     background-color: var(--Color-Principal-Ligero);
+}
+
+/* Testimonial */
+
+.testimonials-seccion {
+    margin-top: calc(2 * var(--Mediano));
+    flex-direction: column;
+    gap: calc(2 * var(--Mediano)) ;
+}
+
+.testimonials {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.testimonial {
+    position: relative;
+    width: 25rem;
+    height: 30rem;
+    padding: var(--Mediano);
+    background-color: rgba(255, 255, 255, .1);
+    box-shadow: 0 0 1rem rgba(255, 255, 255, .2);
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    border-left: 1px solid rgba(255, 255, 255, .3);
+    border-radius: var(--Border-Radius);
+    transition: .3s;
+}
+
+.testimonial:hover {
+    transform: translateY(-20px);
+}
+
+.testimonial__picture {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.testimonial__img {
+    position: absolute;
+    transform: translate(43%, -110%);
+    width: 9rem;
+    height: 9rem;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.img-top {
+    object-position: top;
+}
+
+.testimonial__description {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: calc(2 * var(--Corto));
+    width: 100%;
+    height: 100%;
+}
+
+.testimonial__name {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.testimonial__job {
+    font-size: 1.4rem;
+    font-weight: var(--Delgada);
+    color: var(--Color-Principal);
+    text-align: center;
+}
+
+.testimonial__quote {
+    text-align: center;
+    font-size: 1.4rem;
+    letter-spacing: 1.15px;
+}
+
+.testimonial__stars svg {
+    width: 20px;
+    height: 20px;
 }
