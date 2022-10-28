@@ -85,3 +85,32 @@ observador.observe(testimonial2);
 observador.observe(testimonial3);
 observador.observe(testimonial4);
 observador.observe(footer);
+
+
+
+/* Header Seccion */
+
+/* const list = document.querySelector('#menu');
+const sections = document.querySelectorAll('.section');
+let indicador = list.querySelector('a');
+
+let indexSeccionActiva;
+
+const observador2 = new IntersectionObserver((entradas, observer) => {
+    entradas.forEach(entrada => {
+        if (entrada.isIntersecting) {
+            indexSeccionActiva = [...sections].indexOf(entrada.target);
+            indicador.style.color = 'var(--Color-Principal)';
+            console.log('Aqui estoy')
+        } else {
+            indicador.style.color = 'white';
+        }
+    });
+}, {
+    rootMargin: '0px',
+	threshold: .1
+});
+
+// Asignamos un observador a cada una de las secciones
+sections.forEach(section => observador2.observe(section));
+console.log(sections); */
