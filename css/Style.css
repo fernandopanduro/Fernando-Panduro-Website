@@ -55,6 +55,7 @@ html {
 body {
     width: 100%;
     min-height: 100vh;
+    padding-bottom: var(--Mediano);
     background-color: var(--Color-Body);
     display: flex;
     flex-direction: column;
@@ -88,6 +89,32 @@ p {
     margin: 0 auto;
     width: 90%;
     max-width: 120rem;
+}
+
+/* Fine */
+
+.fine {
+    opacity: 0;
+    transition: 1s;
+} 
+
+.fine-top  {
+    transform: translateY(20rem);
+}
+.fine-bottom  {
+    transform: translateY(20rem);
+}
+.fine-left  {
+    transform: translateX(-20rem);
+}
+
+.fine-rigth {
+    transform: translateX(20rem);
+}
+
+.show {
+    transform: none;
+    opacity: 1;
 }
 
 /* Header */
@@ -229,6 +256,7 @@ main {
 
 .presentation {
     width: 100%;
+    height: 65rem;
     margin-top: calc(2 * var(--Mediano));
 }
 
@@ -243,7 +271,7 @@ main {
     flex: 50%;
     height: 100%;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     gap: var(--Mediano);
     
 }
@@ -251,6 +279,8 @@ main {
 @media (max-width: 920px) {
     .presentation__description {
         width: 100%;
+        height: auto;
+        justify-content: flex-start;
         text-align: center;
     }
 }
@@ -312,6 +342,10 @@ main {
     background-color: var(--Color-Principal);
     color: var(--Color-Body);
     align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
     transition: .3s;
 }
 
@@ -319,6 +353,14 @@ main {
     .button {
         align-self: center;
     }
+}
+
+.button__path {
+    transition: .3s;
+}
+
+.button:hover .button__path {
+    fill: var(--Color-Principal);
 }
 
 .button:hover {
@@ -352,6 +394,7 @@ main {
     flex-direction: column;
     margin-top: calc(2 * var(--Mediano));
     gap: calc(2 * var(--Mediano));
+    overflow: hidden;
 }
 
 .title {
@@ -461,7 +504,9 @@ main {
 .testimonials-seccion {
     margin-top: calc(2 * var(--Mediano));
     flex-direction: column;
-    gap: calc(2 * var(--Mediano)) ;
+    gap: calc(2 * var(--Mediano));
+    overflow: hidden;
+
 }
 
 .testimonials {
@@ -481,7 +526,7 @@ main {
     border-top: 1px solid rgba(255, 255, 255, .3);
     border-left: 1px solid rgba(255, 255, 255, .3);
     border-radius: var(--Border-Radius);
-    transition: .3s;
+    transition: 1s;
 }
 
 .testimonial:hover {
@@ -545,6 +590,7 @@ main {
 
 .footer {
     width: 100%;
+    border-top: 1px solid var(--Color-Principal);
     margin-top: calc(2 * var(--Mediano));
     padding-top: calc(2 * var(--Mediano));
     padding-bottom: var(--Mediano);
