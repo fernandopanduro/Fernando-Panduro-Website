@@ -116,6 +116,17 @@ p {
     opacity: 1;
 }
 
+/* Particles JS */
+
+#particles-js {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 /* Header */
 
 header {
@@ -124,7 +135,7 @@ header {
     right: 0;
     padding: var(--Corto) 0;
     background: var(--Color-Body);
-    box-shadow: 0 0 7px rgba(255, 255, 255, .3);
+    box-shadow: 0 0 6px rgba(255, 255, 255, .4);
     z-index: 20;
 }
 
@@ -349,6 +360,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: .5rem;
+    z-index: 10;
     transition: .3s;
 }
 
@@ -394,6 +406,7 @@ main {
 /* Projects */
 
 .projects {
+    position: relative;
     flex-direction: column;
     margin-top: calc(2 * var(--Mediano));
     gap: calc(2 * var(--Mediano));
@@ -509,10 +522,10 @@ main {
     flex-direction: column;
     gap: calc(2 * var(--Mediano));
     overflow: hidden;
-
 }
 
 .testimonials {
+    position: relative;
     width: 100%;
     flex-wrap: wrap;
     gap: var(--Largo);
@@ -529,6 +542,7 @@ main {
     border-top: 1px solid rgba(255, 255, 255, .3);
     border-left: 1px solid rgba(255, 255, 255, .3);
     border-radius: var(--Border-Radius);
+    z-index: 10;
     transition: 1s;
 }
 
