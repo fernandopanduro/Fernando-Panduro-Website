@@ -13,8 +13,8 @@
 
     /* Tamaños de Fuentes */
     --Fuente-Grande: 4rem;
-    --Fuente-Mediana: 3.2rem;
-    --Fuente-Chica: 2.4rem;
+    --Fuente-Mediana: 3rem;
+    --Fuente-Chica: 2.2rem;
     --Fuente-Parrafo: 1.6rem;
 
     /* Margen */
@@ -58,6 +58,7 @@ body {
     background-color: var(--Color-Body);
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 a {
@@ -131,12 +132,11 @@ header {
     width: 30rem;
     height: 100vh;
     top: 0;
-    right: -35rem;
+    right: -95rem;
     bottom: 0;
-    z-index: 10;
-    display: none;
+    z-index: -1;
     background: var(--Color-Principal-Ligero);
-    transition: .3s;
+    transition: .4s;
 }
 
 .activelist-responsive {
@@ -147,6 +147,11 @@ header {
 
 .list__item {
     font-size: var(--Fuente-Parrafo);
+}
+
+.list-responsive .list__item {
+    font-size: var(--Fuente-Chica);
+    font-weight: var(--Regular);
 }
 
 .list__item--button {
@@ -235,9 +240,10 @@ main {
 }
 
 .presentation__description {
-    max-width: 70rem;
+    flex: 50%;
     height: 100%;
     flex-direction: column;
+    justify-content: flex-start;
     gap: var(--Mediano);
     
 }
@@ -245,14 +251,26 @@ main {
 @media (max-width: 920px) {
     .presentation__description {
         width: 100%;
+        text-align: center;
     }
+}
+
+.presentation__description div {
+    width: 100%;
 }
 
 .presentation__title {
     margin: 0;
-    font-size: 7rem;
+    font-size: 6rem;
     font-weight: var(--Black);
     color: var(--Color-Principal);
+}
+
+@media (max-width: 468px) {
+    .presentation__title {
+    font-weight: var(--Bold);
+    font-size: 5rem;
+    }
 }
 
 .presentation__subtitle {
@@ -260,12 +278,25 @@ main {
     font-size: 4rem;
 }
 
+@media (max-width: 468px) {
+    .presentation__subtitle {
+        font-weight: 600;
+        font-size: 3.5rem;
+    }
+}
+
 .hr {
     border: none;
     margin-top: .7rem;
-    width:65%;
+    width:85%;
     height: 1px;
     background-color: var(--Color-Principal);
+}
+
+@media (max-width: 920px) {
+    .hr {
+        width: 100%;
+    }
 }
 
 .button {
@@ -282,6 +313,12 @@ main {
     color: var(--Color-Body);
     align-self: flex-start;
     transition: .3s;
+}
+
+@media (max-width: 920px) {
+    .button {
+        align-self: center;
+    }
 }
 
 .button:hover {
@@ -377,6 +414,12 @@ main {
     transition: .3s;
 }
 
+@media (max-width: 468px) {
+    .card__content {
+        opacity: 1;
+    }
+}
+
 .card__title {
     font-weight: var(--Black);
     font-size: var(--Fuente-Chica);
@@ -446,14 +489,15 @@ main {
 }
 
 .testimonial__picture {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    left: calc(50% - 4.5rem);
+    top: calc(-50% + 9rem);
+    width: 9rem;
+    height: 9rem;
     border-radius: 100%;
 }
 
 .testimonial__img {
-    position: absolute;
-    transform: translate(50%, -110%);
     width: 9rem;
     height: 9rem;
     object-fit: cover;
