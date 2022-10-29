@@ -518,6 +518,7 @@ main {
 /* Testimonial */
 
 .testimonials-seccion {
+    position: relative;
     margin-top: calc(2 * var(--Mediano));
     flex-direction: column;
     gap: calc(2 * var(--Mediano));
@@ -542,6 +543,7 @@ main {
     border-top: 1px solid rgba(255, 255, 255, .3);
     border-left: 1px solid rgba(255, 255, 255, .3);
     border-radius: var(--Border-Radius);
+    backdrop-filter: blur(20px);
     z-index: 10;
     transition: 1s;
 }
@@ -602,6 +604,69 @@ main {
     width: 20px;
     height: 20px;
 }
+
+/* square */
+
+.square {
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    z-index: -1;
+}
+
+.square1 {
+    transform: rotate(35deg) scale(.8) translate(-400px, -500px);
+    background-color: blue;
+    animation: square1 8s alternate infinite;
+}
+
+@media (max-width: 920px) {
+    .square1 {
+    transform: rotate(45deg) scale(.8) translate(-400px, -300px);
+    }
+}
+@media (max-width: 1500px) {
+    .square1 {
+    transform: rotate(45deg) scale(.8) translate(-400px, -100px);
+    }
+}
+.square2 {
+    transform: rotate(30deg) scale(1) translate(100px,000px);
+    background-color: red;
+    animation: square2 5s alternate infinite;
+}
+
+.square3 {
+    transform: rotate(30deg) scale(.8) translate(200px, 600px);
+    background-color: white;
+    animation: square3 8s alternate infinite;
+}
+
+@media (max-width: 720px) {
+    .square3 {
+        transform: rotate(30deg) scale(.8) translate(200px, 500px);
+    }
+}
+
+@keyframes square1 {
+    100% {
+        transform: rotate(35deg) scale(.8) translate(-400px, -420px)
+    }
+}
+
+
+@keyframes square2 {
+    100% {
+        transform: rotate(30deg) scale(1) translate(100px,50px);
+    }
+}
+
+@keyframes square3 {
+    100% {
+        transform: rotate(30deg) scale(.8) translate(200px, 650px);
+    }
+}
+
 
 /* Footer */
 
