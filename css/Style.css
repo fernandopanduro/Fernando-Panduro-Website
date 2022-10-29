@@ -445,6 +445,10 @@ main {
 .card__picture {
     position: absolute;
     width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
     overflow: hidden;
     z-index: -1;
 }
@@ -456,7 +460,7 @@ main {
 .card__img {
     width: 100%;
     object-fit: cover;
-    z-index: 0;
+    z-index: 1;
     transition: .3s;
 }
 
