@@ -87,6 +87,18 @@ observador.observe(testimonial4);
 observador.observe(footer);
 
 
+/* Btn-Up */
+
+const btnUp = document.querySelector('.btn-up');
+window.pageYOffSet
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 200) {
+        btnUp.classList.add('btn-up--active');
+    } else {
+        btnUp.classList.remove('btn-up--active');
+    }
+})
+
 
 /* Header Seccion */
 
