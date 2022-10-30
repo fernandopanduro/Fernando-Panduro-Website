@@ -127,6 +127,39 @@ p {
     right: 0;
 }
 
+/* Btn-up */
+
+.btn-up {
+    position: fixed;
+    width: 3.5rem;
+    height: 3.5rem;
+    bottom: 5%;
+    right: 5%;
+    border: 2px solid var(--Color-Principal);
+    border-radius: var(--Border-Radius);
+    z-index: 30;
+    transition: .3s;
+}
+
+@media (min-width: 1300px) {
+    .btn-up {
+        right: 3.5%;
+    }
+}
+
+.btn-up:hover {
+    background-color: var(--Color-Principal);
+}
+
+.btn-up svg path:nth-child(2) {
+    fill: var(--Color-Principal);
+    transition: .3s;
+}
+
+.btn-up:hover svg path:nth-child(2) {
+    fill: white;
+}
+
 /* Header */
 
 header {
