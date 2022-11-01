@@ -480,6 +480,12 @@ main {
     object-fit: cover;
 }
 
+@media (min-width: 720px) {
+    .about__img img {
+        width: 24rem;
+    }
+}
+
 .about__description {
     position: relative;
     width: 100%;
