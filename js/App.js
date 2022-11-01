@@ -42,6 +42,10 @@ function barsAnimate() {
 const header = document.querySelector('#header');
 const presentation__description = document.querySelector('#presentation__description');
 const presentation__picture = document.querySelector('#presentation__picture');
+const about = document.querySelector('#about__titles');
+const aboutDescription = document.querySelector('#about__description');
+const imgHeart = document.querySelector('#img__heart');
+const imgBulb = document.querySelector('#img__bulb');
 const projects = document.querySelector('#projects__titles');
 const card1 = document.querySelector('#card1');
 const card2 = document.querySelector('#card2');
@@ -75,6 +79,10 @@ const observador = new IntersectionObserver(cargarElementos, {
 observador.observe(header);
 observador.observe(presentation__description);
 observador.observe(presentation__picture);
+observador.observe(about);
+observador.observe(aboutDescription);
+observador.observe(imgHeart);
+observador.observe(imgBulb);
 observador.observe(projects);
 observador.observe(card1);
 observador.observe(card2);
@@ -126,3 +134,17 @@ const observador2 = new IntersectionObserver((entradas, observer) => {
 // Asignamos un observador a cada una de las secciones
 sections.forEach(section => observador2.observe(section));
 console.log(sections); */
+
+/* Parallax Img */
+
+    let imgHeartParallax = document.querySelector('.about__img--heart');
+    let imgBulbParallax = document.querySelector('.about__img--bulb');
+
+window.addEventListener('scroll', function () {
+    let valueScroll = window.scrollY;
+    console.log(valueScroll);
+    
+    imgHeartParallax.style.bottom = -valueScroll * .1 + 'px'
+    imgBulbParallax.style.top = valueScroll * 0.1 + 'px'
+}
+    );
