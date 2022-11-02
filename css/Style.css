@@ -757,7 +757,7 @@ main {
 
 .square3 {
     transform: rotate(30deg) scale(.8) translate(200px, 600px);
-    background-color: white;
+    background-color: rgb(111, 202, 25);
     animation: square3 8s alternate infinite;
 }
 
