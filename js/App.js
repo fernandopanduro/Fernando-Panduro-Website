@@ -148,3 +148,4 @@ window.addEventListener('scroll', function () {
     imgBulbParallax.style.top = valueScroll * 0.1 + 'px'
 }
     );
+    
