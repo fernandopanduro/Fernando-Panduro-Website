@@ -463,14 +463,14 @@ main {
 .about__img--heart {
     bottom: -10rem;
     left: -3rem;
-    filter: drop-shadow(0px 0px 7px rgba(255, 255, 255, 0.5));
+    filter: drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5));
     z-index: 10;
 }
 
 .about__img--bulb {
     top: -5rem;
     right: -3rem;
-    filter: drop-shadow(0px 0px 7px rgba(255, 255, 255, 0.8));
+    filter: drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.8));
     opacity: .8;
     z-index: -1;
 }
@@ -493,12 +493,14 @@ main {
     padding: var(--Mediano);
     margin-top: calc(2 * var(--Mediano));
     border-radius: var(--Border-Radius);
-    border: 2px solid rgba(255, 255, 255, .7);
+    border: 1px solid rgba(255, 255, 255, .7);
+    border-bottom: none;
+    border-right: none;
     box-shadow: 0 0 8px rgba(255, 255, 255, .5);
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.072);
-    backdrop-filter: blur(7px);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(11px);
     gap: var(--Mediano);
 }
 
