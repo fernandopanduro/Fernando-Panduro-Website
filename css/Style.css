@@ -173,7 +173,7 @@ header {
     position: fixed;
     left: 0;
     right: 0;
-    padding: var(--Corto) 0;
+    padding: calc(var(--Corto) + 7px) 0;
     background: var(--Color-Body);
     box-shadow: 0 0 6px rgba(255, 255, 255, .4);
     z-index: 20;
