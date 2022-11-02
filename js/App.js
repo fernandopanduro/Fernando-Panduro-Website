@@ -142,10 +142,7 @@ console.log(sections); */
 
 window.addEventListener('scroll', function () {
     let valueScroll = window.scrollY;
-    console.log(valueScroll);
-    
     imgHeartParallax.style.bottom = -valueScroll * .1 + 'px'
     imgBulbParallax.style.top = valueScroll * 0.1 + 'px'
-}
-    );
+});
     
