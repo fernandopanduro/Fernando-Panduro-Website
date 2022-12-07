@@ -68,7 +68,7 @@ const cargarElementos  = (entradas, observador) => {
     });
 };
 
-// Observa cuando un elemento entraen el viewport
+// Observa cuando un elemento entra al viewport
 const observador = new IntersectionObserver(cargarElementos, {
     root: null, //Punto de referencia por defecto  es  el wimdow
     rootMargin: "0px", // Margin
